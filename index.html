@@ -1,13 +1,175 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Region-Aware Masking TTS Demo</title>
-  </head>
-  <body>
-    <header>
-      <h1>Region-Aware Masking TTS Demo</h1>
-    </header>
-  </body>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Region-Aware Masking for Accent-Robust Cross-Lingual TTS — Audio Samples</title>
+<style>
+  :root{
+    --ink:#16181d; --muted:#5d6470; --line:#e3e6ea; --bg:#fbfbfc;
+    --good:#1a7f5a; --bad:#b3261e; --warn:#a8630b; --accent:#2b5c9b;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+       font:15px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif}
+  .wrap{max-width:1040px;margin:0 auto;padding:40px 20px 80px}
+  header{border-bottom:2px solid var(--ink);padding-bottom:22px;margin-bottom:8px}
+  h1{font-size:25px;line-height:1.3;margin:0 0 6px;letter-spacing:-.2px}
+  .sub{color:var(--muted);font-size:14px}
+  .anon{background:#fff5d6;border:1px solid #e8d48a;padding:9px 12px;
+        border-radius:6px;font-size:13px;margin-top:14px;color:#6b5200}
+  h2{font-size:20px;margin:44px 0 6px;padding-top:26px;border-top:2px solid var(--ink)}
+  h2:first-of-type{border-top:none}
+  h3{font-size:16px;margin:30px 0 4px;color:var(--accent)}
+  p.lead{color:var(--muted);margin:0 0 18px;max-width:74ch}
+  .legend{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 26px}
+  .chip{font-size:12.5px;padding:5px 11px;border-radius:20px;border:1px solid var(--line);
+        background:#fff}
+  .chip b{font-weight:650}
+  .chip.rec{border-color:var(--good);background:#eaf6f1;color:var(--good)}
+  .chip.drift{border-color:var(--bad);background:#fdeeed;color:var(--bad)}
+  .chip.ref{background:#f1f2f4;color:var(--muted)}
+  .item{background:#fff;border:1px solid var(--line);border-radius:10px;
+        padding:20px 22px;margin-bottom:22px}
+  .itemhead{display:flex;flex-wrap:wrap;gap:10px;align-items:baseline;
+            justify-content:space-between;margin-bottom:12px}
+  .itemid{font:12.5px/1 ui-monospace,SFMono-Regular,Menlo,monospace;color:var(--muted)}
+  .texts{font-size:14px;margin:0 0 16px}
+  .texts div{margin:3px 0}
+  .texts .lbl{display:inline-block;min-width:92px;color:var(--muted);font-size:12.5px}
+  table{width:100%;border-collapse:collapse;font-size:14px}
+  th{text-align:left;font-weight:650;font-size:12px;letter-spacing:.04em;
+     text-transform:uppercase;color:var(--muted);border-bottom:1px solid var(--line);
+     padding:0 8px 7px}
+  th.num,td.num{text-align:right;white-space:nowrap}
+  td{padding:8px;border-bottom:1px solid #f1f3f5;vertical-align:middle}
+  tr:last-child td{border-bottom:none}
+  tr.ref td{background:#fafafa;color:var(--muted)}
+  tr.rec td{background:#f4fbf8}
+  tr.drift td{background:#fef7f6}
+  .sys{font:13.5px/1 ui-monospace,SFMono-Regular,Menlo,monospace;font-weight:650}
+  .tag{font-size:11px;padding:2px 7px;border-radius:10px;margin-left:7px;
+       font-family:-apple-system,sans-serif;font-weight:600;vertical-align:1px;
+       white-space:nowrap}
+  td.num .tag{margin-left:0;margin-right:7px}
+  .tag.rec{background:#d8f0e6;color:var(--good)}
+  .tag.drift{background:#fbdedb;color:var(--bad)}
+  .tag.base{background:#eceef0;color:var(--muted)}
+  audio{height:32px;width:210px;vertical-align:middle}
+  .val{font-variant-numeric:tabular-nums}
+  .flag-hi{color:var(--bad);font-weight:650}
+  .flag-lo{color:var(--good)}
+  footer{margin-top:50px;padding-top:20px;border-top:1px solid var(--line);
+         font-size:13px;color:var(--muted)}
+  @media (max-width:760px){
+    audio{width:100%;min-width:150px}
+    .wrap{padding:24px 14px 60px}
+    th.hide,td.hide{display:none}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <h1>Region-Aware Masking for Accent-Robust Cross-Lingual Text-to-Speech</h1>
+</header>
+
+<p class="lead" style="margin-top:22px">
+Each example asks the model to speak an <b>English</b> sentence in the voice of a
+<b>non-English reference</b> — keeping the speaker's timbre without carrying their accent across.
+The trade-off to listen for: more aggressive masking removes more accent but increasingly
+destroys the voice, sometimes flipping the apparent gender.
+The samples below are drawn from the FLEURS evaluation set used in the paper, and the scores
+shown are the per-clip objective metrics and human listening-test ratings.
+</p>
+
+<div class="legend">
+  <span class="chip ref"><b>B</b> — multilingual single-language utterance baseline</span>
+  <span class="chip ref"><b>M1</b> — bilingual adaptation, original random mask</span>
+  <span class="chip rec"><b>M2 / M2+P</b> — two_region (recommended)</span>
+  <span class="chip"><b>M5 / M5+P</b> — uniform mixture</span>
+  <span class="chip drift"><b>M3 / M4</b> — part1_only (accent-best, voice-worst)</span>
+</div>
+<p class="lead" style="font-size:13.5px">
+<b>Accent</b> is the mean listener rating: 0 = none, 1 = very slight, 2 = mild,
+3 = moderate, 4 = strong, 5 = very strong.
+</p>
+
+<div id="content"></div>
+
+</div>
+
+<script>
+const REC = new Set(["M2","M2+P"]);
+const DRIFT = new Set(["M3","M4"]);
+const REF = new Set(["B","M1"]);
+
+function row(s){
+  // Drift is a property of the clip, not the system: flag it from this item's
+  // own listener ratings rather than from which mask produced it.
+  const drifted = s.ident >= 50;
+  const cls = drifted ? "drift" : REC.has(s.label) ? "rec"
+            : REF.has(s.label) ? "ref" : "";
+  const tag = REC.has(s.label) ? '<span class="tag rec">recommended</span>'
+            : REF.has(s.label) ? '<span class="tag base">baseline</span>' : "";
+  const idtag = drifted ? '<span class="tag drift">voice changed</span>' : "";
+  const idc = s.ident >= 50 ? "flag-hi" : s.ident <= 20 ? "flag-lo" : "";
+  return `<tr class="${cls}">
+    <td><span class="sys">${s.label}</span>${tag}</td>
+    <td><audio controls preload="none" src="${s.file}"></audio></td>
+    <td class="num val">${s.accent ?? "—"}</td>
+    <td class="num val ${idc}">${idtag}${s.ident ?? "—"}%</td>
+    <td class="num val hide">${s.utmos ?? "—"}</td>
+    <td class="num val hide">${s.sim ?? "—"}</td>
+    <td class="num val hide">${s.wer ?? "—"}</td>
+  </tr>`;
+}
+
+function itemBlock(it){
+  return `<div class="item">
+    <div class="itemhead">
+      <div class="itemid">${it.id}</div>
+    </div>
+    <div class="texts">
+      <div><span class="lbl">Prompt text</span> ${it.prompt_text ?? ""}</div>
+      <div><span class="lbl">Target text</span> <b>${it.target_text ?? ""}</b></div>
+      <div><span class="lbl">Reference</span>
+        <audio controls preload="none" src="${it.prompt}"></audio></div>
+    </div>
+    <table>
+      <thead><tr>
+        <th>System</th><th>English output</th>
+        <th class="num">Accent&nbsp;↓</th><th class="num">Voice changed&nbsp;↓</th>
+        <th class="num hide">UTMOS&nbsp;↑</th>
+        <th class="num hide">SIM&nbsp;↑</th><th class="num hide">WER&nbsp;↓</th>
+      </tr></thead>
+      <tbody>${it.systems.map(row).join("")}</tbody>
+    </table>
+  </div>`;
+}
+
+const ITEMS = [{"id": "352__es_419_to_en", "lang": "es_419", "lang_name": "Spanish (es-419)", "sentence_id": "352", "prompt_text": "La tensión superficial provoca que la aguja permanezca flotando sobre el agua.", "target_text": "The steel needle floats on top of the water because of surface tension.", "prompt_gender": "FEMALE", "prompt_dur": 7.02, "systems": [{"label": "B", "file": "audio/B__352__es_419_to_en.wav", "accent": 4.65, "ident": 0, "wer": 0.154, "sim": 0.705, "utmos": 2.92}, {"label": "M1", "file": "audio/M1__352__es_419_to_en.wav", "accent": 0.05, "ident": 5, "wer": 0.0, "sim": 0.429, "utmos": 4.39}, {"label": "M2", "file": "audio/M2__352__es_419_to_en.wav", "accent": 0.2, "ident": 5, "wer": 0.0, "sim": 0.251, "utmos": 3.98}, {"label": "M3", "file": "audio/M3__352__es_419_to_en.wav", "accent": 0.0, "ident": 100, "wer": 0.0, "sim": 0.022, "utmos": 4.37}, {"label": "M4", "file": "audio/M4__352__es_419_to_en.wav", "accent": 0.25, "ident": 100, "wer": 0.077, "sim": 0.049, "utmos": 4.32}, {"label": "M5", "file": "audio/M5__352__es_419_to_en.wav", "accent": 0.25, "ident": 100, "wer": 0.0, "sim": 0.268, "utmos": 4.08}, {"label": "M5+P", "file": "audio/M5PP__352__es_419_to_en.wav", "accent": 0.0, "ident": 10, "wer": 0.0, "sim": 0.193, "utmos": 4.33}, {"label": "M2+P", "file": "audio/M2PP__352__es_419_to_en.wav", "accent": 0.1, "ident": 5, "wer": 0.0, "sim": 0.274, "utmos": 4.35}], "prompt": "audio/352__es_419.wav", "role": "contrast"}, {"id": "1772__es_419_to_en", "lang": "es_419", "lang_name": "Spanish (es-419)", "sentence_id": "1772", "prompt_text": "Por tanto, es probable que la anotación haya sido agregada tan solo como un rótulo.", "target_text": "So, it is likely that the notation was added simply as a label.", "prompt_gender": "MALE", "prompt_dur": 7.44, "systems": [{"label": "B", "file": "audio/B__1772__es_419_to_en.wav", "accent": 4.58, "ident": 0, "wer": 0.077, "sim": 0.759, "utmos": 3.39}, {"label": "M1", "file": "audio/M1__1772__es_419_to_en.wav", "accent": 0.21, "ident": 5, "wer": 0.0, "sim": 0.509, "utmos": 3.86}, {"label": "M2", "file": "audio/M2__1772__es_419_to_en.wav", "accent": 0.42, "ident": 11, "wer": 0.0, "sim": 0.363, "utmos": 4.23}, {"label": "M3", "file": "audio/M3__1772__es_419_to_en.wav", "accent": 0.58, "ident": 95, "wer": 0.077, "sim": 0.02, "utmos": 4.39}, {"label": "M4", "file": "audio/M4__1772__es_419_to_en.wav", "accent": 0.21, "ident": 100, "wer": 0.0, "sim": 0.022, "utmos": 4.39}, {"label": "M5", "file": "audio/M5__1772__es_419_to_en.wav", "accent": 1.26, "ident": 5, "wer": 0.0, "sim": 0.301, "utmos": 3.57}, {"label": "M5+P", "file": "audio/M5PP__1772__es_419_to_en.wav", "accent": 0.16, "ident": 5, "wer": 0.0, "sim": 0.347, "utmos": 3.83}, {"label": "M2+P", "file": "audio/M2PP__1772__es_419_to_en.wav", "accent": 0.68, "ident": 5, "wer": 0.0, "sim": 0.467, "utmos": 4.25}], "prompt": "audio/1772__es_419.wav", "role": "contrast"}, {"id": "96__es_419_to_en", "lang": "es_419", "lang_name": "Spanish (es-419)", "sentence_id": "96", "prompt_text": "Se dio inicio a una pesquisa para investigar.", "target_text": "An inquiry was established to investigate.", "prompt_gender": "FEMALE", "prompt_dur": 5.04, "systems": [{"label": "B", "file": "audio/B__96__es_419_to_en.wav", "accent": 4.25, "ident": 0, "wer": 0.0, "sim": 0.702, "utmos": 3.44}, {"label": "M1", "file": "audio/M1__96__es_419_to_en.wav", "accent": 1.15, "ident": 0, "wer": 0.0, "sim": 0.461, "utmos": 3.92}, {"label": "M2", "file": "audio/M2__96__es_419_to_en.wav", "accent": 0.6, "ident": 0, "wer": 0.0, "sim": 0.238, "utmos": 3.47}, {"label": "M3", "file": "audio/M3__96__es_419_to_en.wav", "accent": 0.45, "ident": 100, "wer": 0.0, "sim": -0.067, "utmos": 4.24}, {"label": "M4", "file": "audio/M4__96__es_419_to_en.wav", "accent": 0.35, "ident": 100, "wer": 0.0, "sim": -0.042, "utmos": 3.8}, {"label": "M5", "file": "audio/M5__96__es_419_to_en.wav", "accent": 0.65, "ident": 5, "wer": 0.0, "sim": 0.092, "utmos": 3.78}, {"label": "M5+P", "file": "audio/M5PP__96__es_419_to_en.wav", "accent": 0.5, "ident": 0, "wer": 0.0, "sim": 0.225, "utmos": 4.28}, {"label": "M2+P", "file": "audio/M2PP__96__es_419_to_en.wav", "accent": 0.7, "ident": 5, "wer": 0.0, "sim": 0.392, "utmos": 4.29}], "prompt": "audio/96__es_419.wav", "role": "contrast"}, {"id": "1652__fr_fr_to_en", "lang": "fr_fr", "lang_name": "French (fr-FR)", "sentence_id": "1652", "prompt_text": "La principale religion en Moldavie est le christianisme orthodoxe.", "target_text": "The major religion in Moldova is Orthodox Christian.", "prompt_gender": "MALE", "prompt_dur": 7.68, "systems": [{"label": "B", "file": "audio/B__1652__fr_fr_to_en.wav", "accent": 4.85, "ident": 0, "wer": 0.125, "sim": 0.758, "utmos": 3.31}, {"label": "M1", "file": "audio/M1__1652__fr_fr_to_en.wav", "accent": 1.25, "ident": 15, "wer": 0.0, "sim": 0.35, "utmos": 3.82}, {"label": "M2", "file": "audio/M2__1652__fr_fr_to_en.wav", "accent": 0.35, "ident": 10, "wer": 0.125, "sim": 0.133, "utmos": 4.17}, {"label": "M3", "file": "audio/M3__1652__fr_fr_to_en.wav", "accent": 0.3, "ident": 70, "wer": 0.0, "sim": 0.075, "utmos": 4.07}, {"label": "M4", "file": "audio/M4__1652__fr_fr_to_en.wav", "accent": 0.2, "ident": 100, "wer": 0.0, "sim": -0.057, "utmos": 4.15}, {"label": "M5", "file": "audio/M5__1652__fr_fr_to_en.wav", "accent": 0.15, "ident": 15, "wer": 0.0, "sim": 0.008, "utmos": 4.25}, {"label": "M5+P", "file": "audio/M5PP__1652__fr_fr_to_en.wav", "accent": 0.5, "ident": 5, "wer": 0.0, "sim": 0.153, "utmos": 4.0}, {"label": "M2+P", "file": "audio/M2PP__1652__fr_fr_to_en.wav", "accent": 0.15, "ident": 10, "wer": 0.0, "sim": 0.1, "utmos": 4.27}], "prompt": "audio/1652__fr_fr.wav", "role": "contrast"}, {"id": "1462__fr_fr_to_en", "lang": "fr_fr", "lang_name": "French (fr-FR)", "sentence_id": "1462", "prompt_text": "Les avis ne sont qu'un bref résumé de la situation politique d'un pays.", "target_text": "Advisories are merely a brief summary of the political situation in one country.", "prompt_gender": "FEMALE", "prompt_dur": 6.48, "systems": [{"label": "B", "file": "audio/B__1462__fr_fr_to_en.wav", "accent": 4.75, "ident": 0, "wer": 0.077, "sim": 0.81, "utmos": 3.38}, {"label": "M1", "file": "audio/M1__1462__fr_fr_to_en.wav", "accent": 1.15, "ident": 15, "wer": 0.0, "sim": 0.242, "utmos": 4.26}, {"label": "M2", "file": "audio/M2__1462__fr_fr_to_en.wav", "accent": 0.15, "ident": 10, "wer": 0.0, "sim": 0.335, "utmos": 4.36}, {"label": "M3", "file": "audio/M3__1462__fr_fr_to_en.wav", "accent": 0.15, "ident": 10, "wer": 0.0, "sim": 0.244, "utmos": 3.87}, {"label": "M4", "file": "audio/M4__1462__fr_fr_to_en.wav", "accent": 1.5, "ident": 100, "wer": 0.0, "sim": 0.026, "utmos": 4.31}, {"label": "M5", "file": "audio/M5__1462__fr_fr_to_en.wav", "accent": 0.75, "ident": 10, "wer": 0.0, "sim": 0.247, "utmos": 4.43}, {"label": "M5+P", "file": "audio/M5PP__1462__fr_fr_to_en.wav", "accent": 0.4, "ident": 5, "wer": 0.0, "sim": 0.313, "utmos": 3.91}, {"label": "M2+P", "file": "audio/M2PP__1462__fr_fr_to_en.wav", "accent": 0.1, "ident": 15, "wer": 0.0, "sim": 0.33, "utmos": 4.41}], "prompt": "audio/1462__fr_fr.wav", "role": "contrast"}, {"id": "367__fr_fr_to_en", "lang": "fr_fr", "lang_name": "French (fr-FR)", "sentence_id": "367", "role": "contrast", "prompt_text": "L'organe principal du système cardio-vasculaire est le cœur, celui-ci pompe le sang.", "target_text": "The major organ of the circulatory system is the heart, which pumps the blood.", "systems": [{"label": "B", "file": "audio/B__367__fr_fr_to_en.wav", "accent": 4.4, "ident": 0, "wer": 0.0, "sim": 0.769, "utmos": 3.21}, {"label": "M1", "file": "audio/M1__367__fr_fr_to_en.wav", "accent": 0.95, "ident": 5, "wer": 0.0, "sim": 0.375, "utmos": 4.12}, {"label": "M2", "file": "audio/M2__367__fr_fr_to_en.wav", "accent": 0.45, "ident": 10, "wer": 0.0, "sim": 0.171, "utmos": 4.14}, {"label": "M3", "file": "audio/M3__367__fr_fr_to_en.wav", "accent": 0.45, "ident": 100, "wer": 0.0, "sim": -0.005, "utmos": 3.81}, {"label": "M4", "file": "audio/M4__367__fr_fr_to_en.wav", "accent": 0.35, "ident": 100, "wer": 0.0, "sim": 0.02, "utmos": 4.32}, {"label": "M5", "file": "audio/M5__367__fr_fr_to_en.wav", "accent": 0.45, "ident": 10, "wer": 0.0, "sim": 0.177, "utmos": 4.27}, {"label": "M5+P", "file": "audio/M5PP__367__fr_fr_to_en.wav", "accent": 0.9, "ident": 10, "wer": 0.0, "sim": 0.357, "utmos": 4.32}, {"label": "M2+P", "file": "audio/M2PP__367__fr_fr_to_en.wav", "accent": 1.2, "ident": 10, "wer": 0.0, "sim": 0.386, "utmos": 4.19}], "prompt": "audio/367__fr_fr.wav"}, {"id": "1772__pt_br_to_en", "lang": "pt_br", "lang_name": "Portuguese (pt-BR)", "sentence_id": "1772", "prompt_text": "Desse modo, é provável que uma nota foi simplesmente adicionada como rótulo.", "target_text": "So, it is likely that the notation was added simply as a label.", "prompt_gender": "MALE", "prompt_dur": 5.76, "systems": [{"label": "B", "file": "audio/B__1772__pt_br_to_en.wav", "accent": 4.2, "ident": 0, "wer": 0.077, "sim": 0.734, "utmos": 3.37}, {"label": "M1", "file": "audio/M1__1772__pt_br_to_en.wav", "accent": 0.15, "ident": 5, "wer": 0.0, "sim": 0.365, "utmos": 4.26}, {"label": "M2", "file": "audio/M2__1772__pt_br_to_en.wav", "accent": 0.55, "ident": 5, "wer": 0.0, "sim": 0.261, "utmos": 3.73}, {"label": "M3", "file": "audio/M3__1772__pt_br_to_en.wav", "accent": 0.2, "ident": 100, "wer": 0.0, "sim": 0.002, "utmos": 4.13}, {"label": "M4", "file": "audio/M4__1772__pt_br_to_en.wav", "accent": 0.1, "ident": 100, "wer": 0.0, "sim": 0.001, "utmos": 3.72}, {"label": "M5", "file": "audio/M5__1772__pt_br_to_en.wav", "accent": 0.1, "ident": 5, "wer": 0.0, "sim": 0.226, "utmos": 4.08}, {"label": "M5+P", "file": "audio/M5PP__1772__pt_br_to_en.wav", "accent": 0.05, "ident": 5, "wer": 0.0, "sim": 0.276, "utmos": 4.2}, {"label": "M2+P", "file": "audio/M2PP__1772__pt_br_to_en.wav", "accent": 0.15, "ident": 5, "wer": 0.0, "sim": 0.319, "utmos": 4.27}], "prompt": "audio/1772__pt_br.wav", "role": "contrast"}, {"id": "213__pt_br_to_en", "lang": "pt_br", "lang_name": "Portuguese (pt-BR)", "sentence_id": "213", "prompt_text": "Ninguém estava dentro do apartamento.", "target_text": "No one was inside the apartment.", "prompt_gender": "MALE", "prompt_dur": 5.28, "systems": [{"label": "B", "file": "audio/B__213__pt_br_to_en.wav", "accent": 4.3, "ident": 0, "wer": 0.0, "sim": 0.722, "utmos": 3.65}, {"label": "M1", "file": "audio/M1__213__pt_br_to_en.wav", "accent": 0.7, "ident": 20, "wer": 0.0, "sim": 0.486, "utmos": 4.05}, {"label": "M2", "file": "audio/M2__213__pt_br_to_en.wav", "accent": 0.1, "ident": 5, "wer": 0.0, "sim": 0.31, "utmos": 4.27}, {"label": "M3", "file": "audio/M3__213__pt_br_to_en.wav", "accent": 0.6, "ident": 25, "wer": 0.0, "sim": 0.159, "utmos": 4.12}, {"label": "M4", "file": "audio/M4__213__pt_br_to_en.wav", "accent": 0.65, "ident": 95, "wer": 0.0, "sim": 0.046, "utmos": 3.73}, {"label": "M5", "file": "audio/M5__213__pt_br_to_en.wav", "accent": 0.45, "ident": 15, "wer": 0.0, "sim": 0.207, "utmos": 3.93}, {"label": "M5+P", "file": "audio/M5PP__213__pt_br_to_en.wav", "accent": 0.3, "ident": 15, "wer": 0.0, "sim": 0.236, "utmos": 4.33}, {"label": "M2+P", "file": "audio/M2PP__213__pt_br_to_en.wav", "accent": 0.05, "ident": 15, "wer": 0.0, "sim": 0.216, "utmos": 3.74}], "prompt": "audio/213__pt_br.wav", "role": "contrast"}, {"id": "505__pt_br_to_en", "lang": "pt_br", "lang_name": "Portuguese (pt-BR)", "sentence_id": "505", "prompt_text": "Esses sites têm recebido bastante atenção, especialmente no ambiente educacional.", "target_text": "These websites have gotten a lot of attention, especially in the education setting.", "prompt_gender": "FEMALE", "prompt_dur": 7.14, "systems": [{"label": "B", "file": "audio/B__505__pt_br_to_en.wav", "accent": 3.9, "ident": 0, "wer": 0.0, "sim": 0.695, "utmos": 3.49}, {"label": "M1", "file": "audio/M1__505__pt_br_to_en.wav", "accent": 1.1, "ident": 10, "wer": 0.0, "sim": 0.254, "utmos": 3.84}, {"label": "M2", "file": "audio/M2__505__pt_br_to_en.wav", "accent": 0.2, "ident": 10, "wer": 0.0, "sim": 0.162, "utmos": 4.01}, {"label": "M3", "file": "audio/M3__505__pt_br_to_en.wav", "accent": 0.3, "ident": 100, "wer": 0.0, "sim": 0.028, "utmos": 4.24}, {"label": "M4", "file": "audio/M4__505__pt_br_to_en.wav", "accent": 0.2, "ident": 100, "wer": 0.0, "sim": 0.017, "utmos": 4.2}, {"label": "M5", "file": "audio/M5__505__pt_br_to_en.wav", "accent": 0.2, "ident": 100, "wer": 0.0, "sim": 0.074, "utmos": 3.68}, {"label": "M5+P", "file": "audio/M5PP__505__pt_br_to_en.wav", "accent": 0.45, "ident": 10, "wer": 0.0, "sim": 0.196, "utmos": 3.82}, {"label": "M2+P", "file": "audio/M2PP__505__pt_br_to_en.wav", "accent": 0.35, "ident": 10, "wer": 0.0, "sim": 0.28, "utmos": 3.89}], "prompt": "audio/505__pt_br.wav", "role": "contrast"}, {"id": "204__es_419_to_en", "lang": "es_419", "lang_name": "Spanish (es-419)", "sentence_id": "204", "role": "clean", "prompt_text": "Parte de las precipitaciones contaron, además, con tormentas eléctricas y numerosos relámpagos.", "target_text": "Some of the rainfall was accompanied by thunderstorms and frequent lightning.", "systems": [{"label": "B", "file": "audio/B__204__es_419_to_en.wav", "accent": 4.35, "ident": 0, "wer": 0.0, "sim": 0.717, "utmos": 3.5}, {"label": "M1", "file": "audio/M1__204__es_419_to_en.wav", "accent": 1.1, "ident": 5, "wer": 0.0, "sim": 0.416, "utmos": 4.11}, {"label": "M2", "file": "audio/M2__204__es_419_to_en.wav", "accent": 0.65, "ident": 5, "wer": 0.0, "sim": 0.354, "utmos": 4.0}, {"label": "M3", "file": "audio/M3__204__es_419_to_en.wav", "accent": 0.15, "ident": 5, "wer": 0.0, "sim": -0.008, "utmos": 4.34}, {"label": "M4", "file": "audio/M4__204__es_419_to_en.wav", "accent": 0.45, "ident": 5, "wer": 0.0, "sim": 0.079, "utmos": 4.31}, {"label": "M5", "file": "audio/M5__204__es_419_to_en.wav", "accent": 0.4, "ident": 5, "wer": 0.0, "sim": 0.323, "utmos": 4.2}, {"label": "M5+P", "file": "audio/M5PP__204__es_419_to_en.wav", "accent": 0.05, "ident": 5, "wer": 0.0, "sim": 0.218, "utmos": 4.3}, {"label": "M2+P", "file": "audio/M2PP__204__es_419_to_en.wav", "accent": 0.7, "ident": 5, "wer": 0.0, "sim": 0.435, "utmos": 4.15}], "prompt": "audio/204__es_419.wav"}, {"id": "461__fr_fr_to_en", "lang": "fr_fr", "lang_name": "French (fr-FR)", "sentence_id": "461", "role": "clean", "prompt_text": "La plupart des télévisions sont fabriquées de manière à plaire au grand public.", "target_text": "Most televisions are made in a way to please the general public.", "systems": [{"label": "B", "file": "audio/B__461__fr_fr_to_en.wav", "accent": 4.5, "ident": 0, "wer": 0.0, "sim": 0.845, "utmos": 2.82}, {"label": "M1", "file": "audio/M1__461__fr_fr_to_en.wav", "accent": 1.9, "ident": 5, "wer": 0.0, "sim": 0.426, "utmos": 3.91}, {"label": "M2", "file": "audio/M2__461__fr_fr_to_en.wav", "accent": 0.95, "ident": 5, "wer": 0.0, "sim": 0.309, "utmos": 4.29}, {"label": "M3", "file": "audio/M3__461__fr_fr_to_en.wav", "accent": 0.4, "ident": 5, "wer": 0.0, "sim": 0.164, "utmos": 3.87}, {"label": "M4", "file": "audio/M4__461__fr_fr_to_en.wav", "accent": 1.2, "ident": 5, "wer": 0.0, "sim": 0.188, "utmos": 4.31}, {"label": "M5", "file": "audio/M5__461__fr_fr_to_en.wav", "accent": 0.85, "ident": 5, "wer": 0.0, "sim": 0.175, "utmos": 4.31}, {"label": "M5+P", "file": "audio/M5PP__461__fr_fr_to_en.wav", "accent": 0.9, "ident": 5, "wer": 0.0, "sim": 0.374, "utmos": 3.87}, {"label": "M2+P", "file": "audio/M2PP__461__fr_fr_to_en.wav", "accent": 1.15, "ident": 5, "wer": 0.0, "sim": 0.362, "utmos": 3.52}], "prompt": "audio/461__fr_fr.wav"}, {"id": "359__pt_br_to_en", "lang": "pt_br", "lang_name": "Portuguese (pt-BR)", "sentence_id": "359", "role": "clean", "prompt_text": "Eles fazem isso emitindo uma pequena partícula de luz chamada \"fóton\".", "target_text": "They do this by emitting a tiny particle of light called a \"photon\".", "systems": [{"label": "B", "file": "audio/B__359__pt_br_to_en.wav", "accent": 4.15, "ident": 0, "wer": 0.077, "sim": 0.714, "utmos": 2.86}, {"label": "M1", "file": "audio/M1__359__pt_br_to_en.wav", "accent": 0.3, "ident": 5, "wer": 0.0, "sim": 0.245, "utmos": 3.92}, {"label": "M2", "file": "audio/M2__359__pt_br_to_en.wav", "accent": 0.25, "ident": 5, "wer": 0.0, "sim": 0.125, "utmos": 3.76}, {"label": "M3", "file": "audio/M3__359__pt_br_to_en.wav", "accent": 0.15, "ident": 5, "wer": 0.0, "sim": -0.03, "utmos": 4.38}, {"label": "M4", "file": "audio/M4__359__pt_br_to_en.wav", "accent": 0.15, "ident": 5, "wer": 0.0, "sim": -0.028, "utmos": 3.76}, {"label": "M5", "file": "audio/M5__359__pt_br_to_en.wav", "accent": 0.4, "ident": 5, "wer": 0.0, "sim": 0.149, "utmos": 3.8}, {"label": "M5+P", "file": "audio/M5PP__359__pt_br_to_en.wav", "accent": 0.15, "ident": 5, "wer": 0.0, "sim": 0.19, "utmos": 3.44}, {"label": "M2+P", "file": "audio/M2PP__359__pt_br_to_en.wav", "accent": 0.15, "ident": 5, "wer": 0.0, "sim": 0.189, "utmos": 3.69}], "prompt": "audio/359__pt_br.wav"}];
+(function(items){
+  const order = ["Spanish (es-419)","French (fr-FR)","Portuguese (pt-BR)"];
+  const notes = {
+    "Spanish (es-419)":"Spanish is the only source language seen during adaptation.",
+    "French (fr-FR)":"French is unseen during adaptation and pair retrieval — and is the hardest direction for the baseline.",
+    "Portuguese (pt-BR)":"Portuguese is unseen during adaptation and pair retrieval."
+  };
+
+  // Within a language, show the all-preserved item first, then the ones where
+  // the aggressive masks drift.
+  const roleRank = it => (it.role || "contrast") === "clean" ? 0 : 1;
+  const byLang = {};
+  items.forEach(it=>{ (byLang[it.lang_name] ||= []).push(it); });
+  Object.values(byLang).forEach(v => v.sort((a,b)=>roleRank(a)-roleRank(b)));
+
+  document.getElementById("content").innerHTML = order.filter(l=>byLang[l]).map(l=>
+    `<h2>${l} → English</h2><p class="lead">${notes[l]||""}</p>` +
+    byLang[l].map(itemBlock).join("")
+  ).join("");
+})(ITEMS);
+</script>
+</body>
 </html>

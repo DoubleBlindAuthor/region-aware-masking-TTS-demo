@@ -1,0 +1,1026 @@
+[
+  {
+    "id": "352__es_419_to_en",
+    "lang": "es_419",
+    "lang_name": "Spanish (es-419)",
+    "sentence_id": "352",
+    "prompt_text": "La tensi\u00f3n superficial provoca que la aguja permanezca flotando sobre el agua.",
+    "target_text": "The steel needle floats on top of the water because of surface tension.",
+    "prompt_gender": "FEMALE",
+    "prompt_dur": 7.02,
+    "systems": [
+      {
+        "label": "B",
+        "file": "audio/B__352__es_419_to_en.wav",
+        "accent": 4.65,
+        "ident": 0,
+        "wer": 0.154,
+        "sim": 0.705,
+        "utmos": 2.92
+      },
+      {
+        "label": "M1",
+        "file": "audio/M1__352__es_419_to_en.wav",
+        "accent": 0.05,
+        "ident": 5,
+        "wer": 0.0,
+        "sim": 0.429,
+        "utmos": 4.39
+      },
+      {
+        "label": "M2",
+        "file": "audio/M2__352__es_419_to_en.wav",
+        "accent": 0.2,
+        "ident": 5,
+        "wer": 0.0,
+        "sim": 0.251,
+        "utmos": 3.98
+      },
+      {
+        "label": "M3",
+        "file": "audio/M3__352__es_419_to_en.wav",
+        "accent": 0.0,
+        "ident": 100,
+        "wer": 0.0,
+        "sim": 0.022,
+        "utmos": 4.37
+      },
+      {
+        "label": "M4",
+        "file": "audio/M4__352__es_419_to_en.wav",
+        "accent": 0.25,
+        "ident": 100,
+        "wer": 0.077,
+        "sim": 0.049,
+        "utmos": 4.32
+      },
+      {
+        "label": "M5",
+        "file": "audio/M5__352__es_419_to_en.wav",
+        "accent": 0.25,
+        "ident": 100,
+        "wer": 0.0,
+        "sim": 0.268,
+        "utmos": 4.08
+      },
+      {
+        "label": "M5+P",
+        "file": "audio/M5PP__352__es_419_to_en.wav",
+        "accent": 0.0,
+        "ident": 10,
+        "wer": 0.0,
+        "sim": 0.193,
+        "utmos": 4.33
+      },
+      {
+        "label": "M2+P",
+        "file": "audio/M2PP__352__es_419_to_en.wav",
+        "accent": 0.1,
+        "ident": 5,
+        "wer": 0.0,
+        "sim": 0.274,
+        "utmos": 4.35
+      }
+    ],
+    "prompt": "audio/352__es_419.wav",
+    "role": "contrast"
+  },
+  {
+    "id": "1772__es_419_to_en",
+    "lang": "es_419",
+    "lang_name": "Spanish (es-419)",
+    "sentence_id": "1772",
+    "prompt_text": "Por tanto, es probable que la anotaci\u00f3n haya sido agregada tan solo como un r\u00f3tulo.",
+    "target_text": "So, it is likely that the notation was added simply as a label.",
+    "prompt_gender": "MALE",
+    "prompt_dur": 7.44,
+    "systems": [
+      {
+        "label": "B",
+        "file": "audio/B__1772__es_419_to_en.wav",
+        "accent": 4.58,
+        "ident": 0,
+        "wer": 0.077,
+        "sim": 0.759,
+        "utmos": 3.39
+      },
+      {
+        "label": "M1",
+        "file": "audio/M1__1772__es_419_to_en.wav",
+        "accent": 0.21,
+        "ident": 5,
+        "wer": 0.0,
+        "sim": 0.509,
+        "utmos": 3.86
+      },
+      {
+        "label": "M2",
+        "file": "audio/M2__1772__es_419_to_en.wav",
+        "accent": 0.42,
+        "ident": 11,
+        "wer": 0.0,
+        "sim": 0.363,
+        "utmos": 4.23
+      },
+      {
+        "label": "M3",
+        "file": "audio/M3__1772__es_419_to_en.wav",
+        "accent": 0.58,
+        "ident": 95,
+        "wer": 0.077,
+        "sim": 0.02,
+        "utmos": 4.39
+      },
+      {
+        "label": "M4",
+        "file": "audio/M4__1772__es_419_to_en.wav",
+        "accent": 0.21,
+        "ident": 100,
+        "wer": 0.0,
+        "sim": 0.022,
+        "utmos": 4.39
+      },
+      {
+        "label": "M5",
+        "file": "audio/M5__1772__es_419_to_en.wav",
+        "accent": 1.26,
+        "ident": 5,
+        "wer": 0.0,
+        "sim": 0.301,
+        "utmos": 3.57
+      },
+      {
+        "label": "M5+P",
+        "file": "audio/M5PP__1772__es_419_to_en.wav",
+        "accent": 0.16,
+        "ident": 5,
+        "wer": 0.0,
+        "sim": 0.347,
+        "utmos": 3.83
+      },
+      {
+        "label": "M2+P",
+        "file": "audio/M2PP__1772__es_419_to_en.wav",
+        "accent": 0.68,
+        "ident": 5,
+        "wer": 0.0,
+        "sim": 0.467,
+        "utmos": 4.25
+      }
+    ],
+    "prompt": "audio/1772__es_419.wav",
+    "role": "contrast"
+  },
+  {
+    "id": "96__es_419_to_en",
+    "lang": "es_419",
+    "lang_name": "Spanish (es-419)",
+    "sentence_id": "96",
+    "prompt_text": "Se dio inicio a una pesquisa para investigar.",
+    "target_text": "An inquiry was established to investigate.",
+    "prompt_gender": "FEMALE",
+    "prompt_dur": 5.04,
+    "systems": [
+      {
+        "label": "B",
+        "file": "audio/B__96__es_419_to_en.wav",
+        "accent": 4.25,
+        "ident": 0,
+        "wer": 0.0,
+        "sim": 0.702,
+        "utmos": 3.44
+      },
+      {
+        "label": "M1",
+        "file": "audio/M1__96__es_419_to_en.wav",
+        "accent": 1.15,
+        "ident": 0,
+        "wer": 0.0,
+        "sim": 0.461,
+        "utmos": 3.92
+      },
+      {
+        "label": "M2",
+        "file": "audio/M2__96__es_419_to_en.wav",
+        "accent": 0.6,
+        "ident": 0,
+        "wer": 0.0,
+        "sim": 0.238,
+        "utmos": 3.47
+      },
+      {
+        "label": "M3",
+        "file": "audio/M3__96__es_419_to_en.wav",
+        "accent": 0.45,
+        "ident": 100,
+        "wer": 0.0,
+        "sim": -0.067,
+        "utmos": 4.24
+      },
+      {
+        "label": "M4",
+        "file": "audio/M4__96__es_419_to_en.wav",
+        "accent": 0.35,
+        "ident": 100,
+        "wer": 0.0,
+        "sim": -0.042,
+        "utmos": 3.8
+      },
+      {
+        "label": "M5",
+        "file": "audio/M5__96__es_419_to_en.wav",
+        "accent": 0.65,
+        "ident": 5,
+        "wer": 0.0,
+        "sim": 0.092,
+        "utmos": 3.78
+      },
+      {
+        "label": "M5+P",
+        "file": "audio/M5PP__96__es_419_to_en.wav",
+        "accent": 0.5,
+        "ident": 0,
+        "wer": 0.0,
+        "sim": 0.225,
+        "utmos": 4.28
+      },
+      {
+        "label": "M2+P",
+        "file": "audio/M2PP__96__es_419_to_en.wav",
+        "accent": 0.7,
+        "ident": 5,
+        "wer": 0.0,
+        "sim": 0.392,
+        "utmos": 4.29
+      }
+    ],
+    "prompt": "audio/96__es_419.wav",
+    "role": "contrast"
+  },
+  {
+    "id": "1652__fr_fr_to_en",
+    "lang": "fr_fr",
+    "lang_name": "French (fr-FR)",
+    "sentence_id": "1652",
+    "prompt_text": "La principale religion en Moldavie est le christianisme orthodoxe.",
+    "target_text": "The major religion in Moldova is Orthodox Christian.",
+    "prompt_gender": "MALE",
+    "prompt_dur": 7.68,
+    "systems": [
+      {
+        "label": "B",
+        "file": "audio/B__1652__fr_fr_to_en.wav",
+        "accent": 4.85,
+        "ident": 0,
+        "wer": 0.125,
+        "sim": 0.758,
+        "utmos": 3.31
+      },
+      {
+        "label": "M1",
+        "file": "audio/M1__1652__fr_fr_to_en.wav",
+        "accent": 1.25,
+        "ident": 15,
+        "wer": 0.0,
+        "sim": 0.35,
+        "utmos": 3.82
+      },
+      {
+        "label": "M2",
+        "file": "audio/M2__1652__fr_fr_to_en.wav",
+        "accent": 0.35,
+        "ident": 10,
+        "wer": 0.125,
+        "sim": 0.133,
+        "utmos": 4.17
+      },
+      {
+        "label": "M3",
+        "file": "audio/M3__1652__fr_fr_to_en.wav",
+        "accent": 0.3,
+        "ident": 70,
+        "wer": 0.0,
+        "sim": 0.075,
+        "utmos": 4.07
+      },
+      {
+        "label": "M4",
+        "file": "audio/M4__1652__fr_fr_to_en.wav",
+        "accent": 0.2,
+        "ident": 100,
+        "wer": 0.0,
+        "sim": -0.057,
+        "utmos": 4.15
+      },
+      {
+        "label": "M5",
+        "file": "audio/M5__1652__fr_fr_to_en.wav",
+        "accent": 0.15,
+        "ident": 15,
+        "wer": 0.0,
+        "sim": 0.008,
+        "utmos": 4.25
+      },
+      {
+        "label": "M5+P",
+        "file": "audio/M5PP__1652__fr_fr_to_en.wav",
+        "accent": 0.5,
+        "ident": 5,
+        "wer": 0.0,
+        "sim": 0.153,
+        "utmos": 4.0
+      },
+      {
+        "label": "M2+P",
+        "file": "audio/M2PP__1652__fr_fr_to_en.wav",
+        "accent": 0.15,
+        "ident": 10,
+        "wer": 0.0,
+        "sim": 0.1,
+        "utmos": 4.27
+      }
+    ],
+    "prompt": "audio/1652__fr_fr.wav",
+    "role": "contrast"
+  },
+  {
+    "id": "1462__fr_fr_to_en",
+    "lang": "fr_fr",
+    "lang_name": "French (fr-FR)",
+    "sentence_id": "1462",
+    "prompt_text": "Les avis ne sont qu'un bref r\u00e9sum\u00e9 de la situation politique d'un pays.",
+    "target_text": "Advisories are merely a brief summary of the political situation in one country.",
+    "prompt_gender": "FEMALE",
+    "prompt_dur": 6.48,
+    "systems": [
+      {
+        "label": "B",
+        "file": "audio/B__1462__fr_fr_to_en.wav",
+        "accent": 4.75,
+        "ident": 0,
+        "wer": 0.077,
+        "sim": 0.81,
+        "utmos": 3.38
+      },
+      {
+        "label": "M1",
+        "file": "audio/M1__1462__fr_fr_to_en.wav",
+        "accent": 1.15,
+        "ident": 15,
+        "wer": 0.0,
+        "sim": 0.242,
+        "utmos": 4.26
+      },
+      {
+        "label": "M2",
+        "file": "audio/M2__1462__fr_fr_to_en.wav",
+        "accent": 0.15,
+        "ident": 10,
+        "wer": 0.0,
+        "sim": 0.335,
+        "utmos": 4.36
+      },
+      {
+        "label": "M3",
+        "file": "audio/M3__1462__fr_fr_to_en.wav",
+        "accent": 0.15,
+        "ident": 10,
+        "wer": 0.0,
+        "sim": 0.244,
+        "utmos": 3.87
+      },
+      {
+        "label": "M4",
+        "file": "audio/M4__1462__fr_fr_to_en.wav",
+        "accent": 1.5,
+        "ident": 100,
+        "wer": 0.0,
+        "sim": 0.026,
+        "utmos": 4.31
+      },
+      {
+        "label": "M5",
+        "file": "audio/M5__1462__fr_fr_to_en.wav",
+        "accent": 0.75,
+        "ident": 10,
+        "wer": 0.0,
+        "sim": 0.247,
+        "utmos": 4.43
+      },
+      {
+        "label": "M5+P",
+        "file": "audio/M5PP__1462__fr_fr_to_en.wav",
+        "accent": 0.4,
+        "ident": 5,
+        "wer": 0.0,
+        "sim": 0.313,
+        "utmos": 3.91
+      },
+      {
+        "label": "M2+P",
+        "file": "audio/M2PP__1462__fr_fr_to_en.wav",
+        "accent": 0.1,
+        "ident": 15,
+        "wer": 0.0,
+        "sim": 0.33,
+        "utmos": 4.41
+      }
+    ],
+    "prompt": "audio/1462__fr_fr.wav",
+    "role": "contrast"
+  },
+  {
+    "id": "367__fr_fr_to_en",
+    "lang": "fr_fr",
+    "lang_name": "French (fr-FR)",
+    "sentence_id": "367",
+    "role": "contrast",
+    "prompt_text": "L'organe principal du syst\u00e8me cardio-vasculaire est le c\u0153ur, celui-ci pompe le sang.",
+    "target_text": "The major organ of the circulatory system is the heart, which pumps the blood.",
+    "systems": [
+      {
+        "label": "B",
+        "file": "audio/B__367__fr_fr_to_en.wav",
+        "accent": 4.4,
+        "ident": 0,
+        "wer": 0.0,
+        "sim": 0.769,
+        "utmos": 3.21
+      },
+      {
+        "label": "M1",
+        "file": "audio/M1__367__fr_fr_to_en.wav",
+        "accent": 0.95,
+        "ident": 5,
+        "wer": 0.0,
+        "sim": 0.375,
+        "utmos": 4.12
+      },
+      {
+        "label": "M2",
+        "file": "audio/M2__367__fr_fr_to_en.wav",
+        "accent": 0.45,
+        "ident": 10,
+        "wer": 0.0,
+        "sim": 0.171,
+        "utmos": 4.14
+      },
+      {
+        "label": "M3",
+        "file": "audio/M3__367__fr_fr_to_en.wav",
+        "accent": 0.45,
+        "ident": 100,
+        "wer": 0.0,
+        "sim": -0.005,
+        "utmos": 3.81
+      },
+      {
+        "label": "M4",
+        "file": "audio/M4__367__fr_fr_to_en.wav",
+        "accent": 0.35,
+        "ident": 100,
+        "wer": 0.0,
+        "sim": 0.02,
+        "utmos": 4.32
+      },
+      {
+        "label": "M5",
+        "file": "audio/M5__367__fr_fr_to_en.wav",
+        "accent": 0.45,
+        "ident": 10,
+        "wer": 0.0,
+        "sim": 0.177,
+        "utmos": 4.27
+      },
+      {
+        "label": "M5+P",
+        "file": "audio/M5PP__367__fr_fr_to_en.wav",
+        "accent": 0.9,
+        "ident": 10,
+        "wer": 0.0,
+        "sim": 0.357,
+        "utmos": 4.32
+      },
+      {
+        "label": "M2+P",
+        "file": "audio/M2PP__367__fr_fr_to_en.wav",
+        "accent": 1.2,
+        "ident": 10,
+        "wer": 0.0,
+        "sim": 0.386,
+        "utmos": 4.19
+      }
+    ],
+    "prompt": "audio/367__fr_fr.wav"
+  },
+  {
+    "id": "1772__pt_br_to_en",
+    "lang": "pt_br",
+    "lang_name": "Portuguese (pt-BR)",
+    "sentence_id": "1772",
+    "prompt_text": "Desse modo, \u00e9 prov\u00e1vel que uma nota foi simplesmente adicionada como r\u00f3tulo.",
+    "target_text": "So, it is likely that the notation was added simply as a label.",
+    "prompt_gender": "MALE",
+    "prompt_dur": 5.76,
+    "systems": [
+      {
+        "label": "B",
+        "file": "audio/B__1772__pt_br_to_en.wav",
+        "accent": 4.2,
+        "ident": 0,
+        "wer": 0.077,
+        "sim": 0.734,
+        "utmos": 3.37
+      },
+      {
+        "label": "M1",
+        "file": "audio/M1__1772__pt_br_to_en.wav",
+        "accent": 0.15,
+        "ident": 5,
+        "wer": 0.0,
+        "sim": 0.365,
+        "utmos": 4.26
+      },
+      {
+        "label": "M2",
+        "file": "audio/M2__1772__pt_br_to_en.wav",
+        "accent": 0.55,
+        "ident": 5,
+        "wer": 0.0,
+        "sim": 0.261,
+        "utmos": 3.73
+      },
+      {
+        "label": "M3",
+        "file": "audio/M3__1772__pt_br_to_en.wav",
+        "accent": 0.2,
+        "ident": 100,
+        "wer": 0.0,
+        "sim": 0.002,
+        "utmos": 4.13
+      },
+      {
+        "label": "M4",
+        "file": "audio/M4__1772__pt_br_to_en.wav",
+        "accent": 0.1,
+        "ident": 100,
+        "wer": 0.0,
+        "sim": 0.001,
+        "utmos": 3.72
+      },
+      {
+        "label": "M5",
+        "file": "audio/M5__1772__pt_br_to_en.wav",
+        "accent": 0.1,
+        "ident": 5,
+        "wer": 0.0,
+        "sim": 0.226,
+        "utmos": 4.08
+      },
+      {
+        "label": "M5+P",
+        "file": "audio/M5PP__1772__pt_br_to_en.wav",
+        "accent": 0.05,
+        "ident": 5,
+        "wer": 0.0,
+        "sim": 0.276,
+        "utmos": 4.2
+      },
+      {
+        "label": "M2+P",
+        "file": "audio/M2PP__1772__pt_br_to_en.wav",
+        "accent": 0.15,
+        "ident": 5,
+        "wer": 0.0,
+        "sim": 0.319,
+        "utmos": 4.27
+      }
+    ],
+    "prompt": "audio/1772__pt_br.wav",
+    "role": "contrast"
+  },
+  {
+    "id": "213__pt_br_to_en",
+    "lang": "pt_br",
+    "lang_name": "Portuguese (pt-BR)",
+    "sentence_id": "213",
+    "prompt_text": "Ningu\u00e9m estava dentro do apartamento.",
+    "target_text": "No one was inside the apartment.",
+    "prompt_gender": "MALE",
+    "prompt_dur": 5.28,
+    "systems": [
+      {
+        "label": "B",
+        "file": "audio/B__213__pt_br_to_en.wav",
+        "accent": 4.3,
+        "ident": 0,
+        "wer": 0.0,
+        "sim": 0.722,
+        "utmos": 3.65
+      },
+      {
+        "label": "M1",
+        "file": "audio/M1__213__pt_br_to_en.wav",
+        "accent": 0.7,
+        "ident": 20,
+        "wer": 0.0,
+        "sim": 0.486,
+        "utmos": 4.05
+      },
+      {
+        "label": "M2",
+        "file": "audio/M2__213__pt_br_to_en.wav",
+        "accent": 0.1,
+        "ident": 5,
+        "wer": 0.0,
+        "sim": 0.31,
+        "utmos": 4.27
+      },
+      {
+        "label": "M3",
+        "file": "audio/M3__213__pt_br_to_en.wav",
+        "accent": 0.6,
+        "ident": 25,
+        "wer": 0.0,
+        "sim": 0.159,
+        "utmos": 4.12
+      },
+      {
+        "label": "M4",
+        "file": "audio/M4__213__pt_br_to_en.wav",
+        "accent": 0.65,
+        "ident": 95,
+        "wer": 0.0,
+        "sim": 0.046,
+        "utmos": 3.73
+      },
+      {
+        "label": "M5",
+        "file": "audio/M5__213__pt_br_to_en.wav",
+        "accent": 0.45,
+        "ident": 15,
+        "wer": 0.0,
+        "sim": 0.207,
+        "utmos": 3.93
+      },
+      {
+        "label": "M5+P",
+        "file": "audio/M5PP__213__pt_br_to_en.wav",
+        "accent": 0.3,
+        "ident": 15,
+        "wer": 0.0,
+        "sim": 0.236,
+        "utmos": 4.33
+      },
+      {
+        "label": "M2+P",
+        "file": "audio/M2PP__213__pt_br_to_en.wav",
+        "accent": 0.05,
+        "ident": 15,
+        "wer": 0.0,
+        "sim": 0.216,
+        "utmos": 3.74
+      }
+    ],
+    "prompt": "audio/213__pt_br.wav",
+    "role": "contrast"
+  },
+  {
+    "id": "505__pt_br_to_en",
+    "lang": "pt_br",
+    "lang_name": "Portuguese (pt-BR)",
+    "sentence_id": "505",
+    "prompt_text": "Esses sites t\u00eam recebido bastante aten\u00e7\u00e3o, especialmente no ambiente educacional.",
+    "target_text": "These websites have gotten a lot of attention, especially in the education setting.",
+    "prompt_gender": "FEMALE",
+    "prompt_dur": 7.14,
+    "systems": [
+      {
+        "label": "B",
+        "file": "audio/B__505__pt_br_to_en.wav",
+        "accent": 3.9,
+        "ident": 0,
+        "wer": 0.0,
+        "sim": 0.695,
+        "utmos": 3.49
+      },
+      {
+        "label": "M1",
+        "file": "audio/M1__505__pt_br_to_en.wav",
+        "accent": 1.1,
+        "ident": 10,
+        "wer": 0.0,
+        "sim": 0.254,
+        "utmos": 3.84
+      },
+      {
+        "label": "M2",
+        "file": "audio/M2__505__pt_br_to_en.wav",
+        "accent": 0.2,
+        "ident": 10,
+        "wer": 0.0,
+        "sim": 0.162,
+        "utmos": 4.01
+      },
+      {
+        "label": "M3",
+        "file": "audio/M3__505__pt_br_to_en.wav",
+        "accent": 0.3,
+        "ident": 100,
+        "wer": 0.0,
+        "sim": 0.028,
+        "utmos": 4.24
+      },
+      {
+        "label": "M4",
+        "file": "audio/M4__505__pt_br_to_en.wav",
+        "accent": 0.2,
+        "ident": 100,
+        "wer": 0.0,
+        "sim": 0.017,
+        "utmos": 4.2
+      },
+      {
+        "label": "M5",
+        "file": "audio/M5__505__pt_br_to_en.wav",
+        "accent": 0.2,
+        "ident": 100,
+        "wer": 0.0,
+        "sim": 0.074,
+        "utmos": 3.68
+      },
+      {
+        "label": "M5+P",
+        "file": "audio/M5PP__505__pt_br_to_en.wav",
+        "accent": 0.45,
+        "ident": 10,
+        "wer": 0.0,
+        "sim": 0.196,
+        "utmos": 3.82
+      },
+      {
+        "label": "M2+P",
+        "file": "audio/M2PP__505__pt_br_to_en.wav",
+        "accent": 0.35,
+        "ident": 10,
+        "wer": 0.0,
+        "sim": 0.28,
+        "utmos": 3.89
+      }
+    ],
+    "prompt": "audio/505__pt_br.wav",
+    "role": "contrast"
+  },
+  {
+    "id": "204__es_419_to_en",
+    "lang": "es_419",
+    "lang_name": "Spanish (es-419)",
+    "sentence_id": "204",
+    "role": "clean",
+    "prompt_text": "Parte de las precipitaciones contaron, adem\u00e1s, con tormentas el\u00e9ctricas y numerosos rel\u00e1mpagos.",
+    "target_text": "Some of the rainfall was accompanied by thunderstorms and frequent lightning.",
+    "systems": [
+      {
+        "label": "B",
+        "file": "audio/B__204__es_419_to_en.wav",
+        "accent": 4.35,
+        "ident": 0,
+        "wer": 0.0,
+        "sim": 0.717,
+        "utmos": 3.5
+      },
+      {
+        "label": "M1",
+        "file": "audio/M1__204__es_419_to_en.wav",
+        "accent": 1.1,
+        "ident": 5,
+        "wer": 0.0,
+        "sim": 0.416,
+        "utmos": 4.11
+      },
+      {
+        "label": "M2",
+        "file": "audio/M2__204__es_419_to_en.wav",
+        "accent": 0.65,
+        "ident": 5,
+        "wer": 0.0,
+        "sim": 0.354,
+        "utmos": 4.0
+      },
+      {
+        "label": "M3",
+        "file": "audio/M3__204__es_419_to_en.wav",
+        "accent": 0.15,
+        "ident": 5,
+        "wer": 0.0,
+        "sim": -0.008,
+        "utmos": 4.34
+      },
+      {
+        "label": "M4",
+        "file": "audio/M4__204__es_419_to_en.wav",
+        "accent": 0.45,
+        "ident": 5,
+        "wer": 0.0,
+        "sim": 0.079,
+        "utmos": 4.31
+      },
+      {
+        "label": "M5",
+        "file": "audio/M5__204__es_419_to_en.wav",
+        "accent": 0.4,
+        "ident": 5,
+        "wer": 0.0,
+        "sim": 0.323,
+        "utmos": 4.2
+      },
+      {
+        "label": "M5+P",
+        "file": "audio/M5PP__204__es_419_to_en.wav",
+        "accent": 0.05,
+        "ident": 5,
+        "wer": 0.0,
+        "sim": 0.218,
+        "utmos": 4.3
+      },
+      {
+        "label": "M2+P",
+        "file": "audio/M2PP__204__es_419_to_en.wav",
+        "accent": 0.7,
+        "ident": 5,
+        "wer": 0.0,
+        "sim": 0.435,
+        "utmos": 4.15
+      }
+    ],
+    "prompt": "audio/204__es_419.wav"
+  },
+  {
+    "id": "461__fr_fr_to_en",
+    "lang": "fr_fr",
+    "lang_name": "French (fr-FR)",
+    "sentence_id": "461",
+    "role": "clean",
+    "prompt_text": "La plupart des t\u00e9l\u00e9visions sont fabriqu\u00e9es de mani\u00e8re \u00e0 plaire au grand public.",
+    "target_text": "Most televisions are made in a way to please the general public.",
+    "systems": [
+      {
+        "label": "B",
+        "file": "audio/B__461__fr_fr_to_en.wav",
+        "accent": 4.5,
+        "ident": 0,
+        "wer": 0.0,
+        "sim": 0.845,
+        "utmos": 2.82
+      },
+      {
+        "label": "M1",
+        "file": "audio/M1__461__fr_fr_to_en.wav",
+        "accent": 1.9,
+        "ident": 5,
+        "wer": 0.0,
+        "sim": 0.426,
+        "utmos": 3.91
+      },
+      {
+        "label": "M2",
+        "file": "audio/M2__461__fr_fr_to_en.wav",
+        "accent": 0.95,
+        "ident": 5,
+        "wer": 0.0,
+        "sim": 0.309,
+        "utmos": 4.29
+      },
+      {
+        "label": "M3",
+        "file": "audio/M3__461__fr_fr_to_en.wav",
+        "accent": 0.4,
+        "ident": 5,
+        "wer": 0.0,
+        "sim": 0.164,
+        "utmos": 3.87
+      },
+      {
+        "label": "M4",
+        "file": "audio/M4__461__fr_fr_to_en.wav",
+        "accent": 1.2,
+        "ident": 5,
+        "wer": 0.0,
+        "sim": 0.188,
+        "utmos": 4.31
+      },
+      {
+        "label": "M5",
+        "file": "audio/M5__461__fr_fr_to_en.wav",
+        "accent": 0.85,
+        "ident": 5,
+        "wer": 0.0,
+        "sim": 0.175,
+        "utmos": 4.31
+      },
+      {
+        "label": "M5+P",
+        "file": "audio/M5PP__461__fr_fr_to_en.wav",
+        "accent": 0.9,
+        "ident": 5,
+        "wer": 0.0,
+        "sim": 0.374,
+        "utmos": 3.87
+      },
+      {
+        "label": "M2+P",
+        "file": "audio/M2PP__461__fr_fr_to_en.wav",
+        "accent": 1.15,
+        "ident": 5,
+        "wer": 0.0,
+        "sim": 0.362,
+        "utmos": 3.52
+      }
+    ],
+    "prompt": "audio/461__fr_fr.wav"
+  },
+  {
+    "id": "359__pt_br_to_en",
+    "lang": "pt_br",
+    "lang_name": "Portuguese (pt-BR)",
+    "sentence_id": "359",
+    "role": "clean",
+    "prompt_text": "Eles fazem isso emitindo uma pequena part\u00edcula de luz chamada \"f\u00f3ton\".",
+    "target_text": "They do this by emitting a tiny particle of light called a \"photon\".",
+    "systems": [
+      {
+        "label": "B",
+        "file": "audio/B__359__pt_br_to_en.wav",
+        "accent": 4.15,
+        "ident": 0,
+        "wer": 0.077,
+        "sim": 0.714,
+        "utmos": 2.86
+      },
+      {
+        "label": "M1",
+        "file": "audio/M1__359__pt_br_to_en.wav",
+        "accent": 0.3,
+        "ident": 5,
+        "wer": 0.0,
+        "sim": 0.245,
+        "utmos": 3.92
+      },
+      {
+        "label": "M2",
+        "file": "audio/M2__359__pt_br_to_en.wav",
+        "accent": 0.25,
+        "ident": 5,
+        "wer": 0.0,
+        "sim": 0.125,
+        "utmos": 3.76
+      },
+      {
+        "label": "M3",
+        "file": "audio/M3__359__pt_br_to_en.wav",
+        "accent": 0.15,
+        "ident": 5,
+        "wer": 0.0,
+        "sim": -0.03,
+        "utmos": 4.38
+      },
+      {
+        "label": "M4",
+        "file": "audio/M4__359__pt_br_to_en.wav",
+        "accent": 0.15,
+        "ident": 5,
+        "wer": 0.0,
+        "sim": -0.028,
+        "utmos": 3.76
+      },
+      {
+        "label": "M5",
+        "file": "audio/M5__359__pt_br_to_en.wav",
+        "accent": 0.4,
+        "ident": 5,
+        "wer": 0.0,
+        "sim": 0.149,
+        "utmos": 3.8
+      },
+      {
+        "label": "M5+P",
+        "file": "audio/M5PP__359__pt_br_to_en.wav",
+        "accent": 0.15,
+        "ident": 5,
+        "wer": 0.0,
+        "sim": 0.19,
+        "utmos": 3.44
+      },
+      {
+        "label": "M2+P",
+        "file": "audio/M2PP__359__pt_br_to_en.wav",
+        "accent": 0.15,
+        "ident": 5,
+        "wer": 0.0,
+        "sim": 0.189,
+        "utmos": 3.69
+      }
+    ],
+    "prompt": "audio/359__pt_br.wav"
+  }
+]
